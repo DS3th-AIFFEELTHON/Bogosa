@@ -113,10 +113,14 @@
 ├── 🗂️ bogosa                            
 |   ├── 📑 250321_LCEL.ipynb             # 메인 파일
 |   ├── 🗂️ QA                            # QA셋
-|   ├── 🗂️ score                         # 정량 평가 결과
-|   ├── 🗂️ raw_pdf                       # 원본 Dataset
-|   ├── 🗂️ parsed_pdf                    # 파싱 완료된 jsonl 파일
+|   ├── 🗂️ raptor                        # raptor 알고리즘 적용 jsonl 파일
 |   └── 🗂️ chunked_jsonl                 # 청킹 완료된 jsonl 파일
+|
+├── 🗂️ evaluation
+|   ├── 🗂️ AutoRAG                       # AutoRAG 활용 QA 데이터셋 생성 실행 파일
+|   └── 🗂️ RAGAS                         # RAGAS 모듈 관련 정리
+|       ├── 🗂️ score                     # DB별 성능 지표
+|       ├── 🗂️ test_notebook             # 성능 평가 ipynb 파일
 |
 ├── 🗂️ streamlit                         # streamlit 관련 정리
 |   ├── 📑 streamlit.py                  # UI
