@@ -1,0 +1,31 @@
+,date
+0,"{'start_date': datetime.date(2024, 11, 1), 'end_date': datetime.date(2024, 11, 30)}"
+1,
+2,"{'start_date': datetime.date(2024, 9, 1), 'end_date': datetime.date(2024, 9, 30)}"
+3,
+4,"{'start_date': datetime.date(2024, 12, 16), 'end_date': datetime.date(2024, 12, 22)}"
+5,"{'start_date': datetime.date(2024, 11, 1), 'end_date': datetime.date(2024, 11, 30)}"
+6,"{'start_date': datetime.date(2024, 11, 1), 'end_date': datetime.date(2024, 11, 30)}"
+7,"{'start_date': datetime.date(2024, 9, 1), 'end_date': datetime.date(2024, 9, 7)}"
+8,"{'start_date': datetime.date(2024, 6, 24), 'end_date': datetime.date(2024, 6, 30)}"
+9,"{'start_date': datetime.date(2024, 10, 1), 'end_date': datetime.date(2024, 10, 31)}"
+10,
+11,"{'start_date': datetime.date(2024, 7, 29), 'end_date': datetime.date(2024, 8, 4)}"
+12,"{'start_date': datetime.date(2024, 11, 25), 'end_date': datetime.date(2024, 12, 1)}"
+13,"{'start_date': datetime.date(2024, 7, 22), 'end_date': datetime.date(2024, 7, 28)}"
+14,"{'start_date': datetime.date(2024, 10, 1), 'end_date': datetime.date(2024, 10, 31)}"
+15,"{'start_date': datetime.date(2024, 12, 9), 'end_date': datetime.date(2024, 12, 15)}"
+16,"{'start_date': datetime.date(2025, 1, 13), 'end_date': datetime.date(2025, 1, 19)}"
+17,"{'start_date': datetime.date(2024, 12, 1), 'end_date': datetime.date(2024, 12, 7)}"
+18,"{'start_date': datetime.date(2024, 10, 11), 'end_date': datetime.date(2024, 10, 18)}"
+19,"{'start_date': datetime.date(2022, 1, 1), 'end_date': datetime.date(2022, 12, 31)}"
+20,"{'start_date': datetime.date(2024, 9, 9), 'end_date': datetime.date(2024, 9, 15)}"
+21,"{'start_date': datetime.date(2024, 12, 22), 'end_date': datetime.date(2024, 12, 28)}"
+22,"{'start_date': datetime.date(2024, 12, 23), 'end_date': datetime.date(2024, 12, 29)}"
+23,"{'start_date': datetime.date(2024, 8, 26), 'end_date': datetime.date(2024, 8, 31)}"
+24,"{'start_date': datetime.date(2024, 7, 15), 'end_date': datetime.date(2024, 7, 21)}"
+25,"{'start_date': datetime.date(2024, 12, 1), 'end_date': datetime.date(2024, 12, 31)}"
+26,"{'start_date': datetime.date(2025, 1, 13), 'end_date': datetime.date(2025, 1, 19)}"
+27,
+28,
+29,"{'start_date': datetime.date(2024, 7, 1), 'end_date': datetime.date(2024, 7, 7)}"
