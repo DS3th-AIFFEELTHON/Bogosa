@@ -117,7 +117,7 @@
 |   ├── 🗂️ AutoRAG                       # AutoRAG 활용 QA 데이터셋 생성 실행 파일
 |   └── 🗂️ RAGAS                         # RAGAS 모듈 관련 정리
 |       ├── 🗂️ score                     # DB별 성능 지표
-|       ├── 🗂️ test_notebook             # 성능 평가 ipynb 파일
+|       └── 🗂️ test_notebook             # 성능 평가 ipynb 파일
 |
 ├── 🗂️ streamlit                         # streamlit 관련 정리
 |   ├── 📑 streamlit.py                  # UI
