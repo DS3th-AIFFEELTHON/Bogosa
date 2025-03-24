@@ -99,23 +99,31 @@
 ## 디렉터리 구조
 ```
 ├── 📑 README.md
+├── 📑 requirements.txt                  # 설치 파일
 |
-├── 🗂️ docs                    # 프로젝트 로그 및 전반 내용 작성 파일
+├── 🗂️ docs                              # 프로젝트 로그 및 전반 내용 작성
+|   ├── 📑 아이펠톤_최종발표자료_보고사.pdf
+|   ├── 📑 프로젝트 계획서
+|   ├── 🗂️ 회의록
+|   ├── 🗂️ 멘토링 회의록
+|   ├── 🗂️ 작업 기록
+|   ├── 📑 파이프라인
+|   └── 🗂️ 프로젝트 로그
 |
-├── 🗂️ bogosa
-|   ├── 🗂️ QA                  #
-|   ├── 🗂️ score               #
-|   ├── 🗂️ raw_pdf             #
-|   ├── 🗂️ parsed_pdf          # 
-|   └──                        # 
-├── 📑                         # 
-├── 📑                         # 
-├── 🗂️                         # 
-|   ├──                        # 
-|   └──                        # 
+├── 🗂️ bogosa                            # 메인
+|   ├── 🗂️ QA                            # QA셋
+|   ├── 🗂️ score                         # 정량 평가 결과
+|   ├── 🗂️ raw_pdf                       # 원본 Dataset
+|   ├── 🗂️ parsed_pdf                    # 파싱 완료된 jsonl 파일
+|   └── 🗂️ chunked_jsonl                 # 청킹 완료된 jsonl 파일
 |
-├── 📑                          # 
-└── 📑                          # 
+├── 🗂️ streamlit                         # streamlit 관련 정리
+|   ├── 📑 streamlit.py                  # UI
+|   └── 📑 financial_qa.py               # Code
+|
+└── 🗂️ pipeline                          # 파이프라인
+     ├── 🗂️ text                         # 텍스트 파이프라인
+     └── 🗂️ Airflow                      # Airflow DAG
 ```
 
 <br>
@@ -144,6 +152,7 @@
 
 > ### RAG
 - LangChain `0.3.19`
+- LangGraph `0.2.74`
 - RAGAS `0.1.21`
 - AutoRAG `0.3.13`
 
