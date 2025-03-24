@@ -2,7 +2,7 @@
 ### [AIFFELthon DS 3기] 보고사: 금융 보고서 기반 VectorDB 구축 및 RAG 최적화
 - 금융 보고서 기반 최적 VectorDB 생성 & RAG 기법 최적화 및 신뢰도 높은 금융 특화 LLM 환경 구축 Project
 
-📍 시연 영상 첨부 📍
+📍 시연 영상 캡쳐본 넣기 📍
 
 <br>
 <br>
@@ -96,70 +96,6 @@
 <br>
 <br>
 
-## 프로젝트 수행
-### 1. Parsing
-- LangGraph 및 Upstage Layout Analyzer를 통한 요소별 데이터를 좌표 기준으로 추출
-- Text
-  - Rule-Based로 전처리
-- Table
-  - Llama Parser를 이용해 Markdown 형태로 추출
-- Chart
-  - OCR을 이용해 내용 추출
-
-<br>
-
-### 2. VectorDB
-- Structure
-  - [ATTU](https://github.com/zilliztech/attu) 활용
-  - Text, Table, Raptor, Image로 구성
-  - Index Type & Metric Type : AUTOINDEX - IP
-
-<br>
-
-### 3. 평가 방법
-- AutoRAG를 이용한 QA Set 생성
-- RAGAS 평가 지표 4가지 활용 : `Context Recall`, `Context Precision`, `Answer Similarity`, `Answer Correctness`
-
-<br>
-
-### 4. Embedding
-- Upstage Solar Embedding 및 [bge-m3](https://huggingface.co/BAAI/bge-m3) 이용
-
-<br>
-
-### 5. Chunking
-- Sementic Chunker 사용
-  - parameter : Percentile 80% based breakpoint
-
-<br>
-
-### 6. 날짜 처리
-- Milvus 메타데이터 필터링 기능 사용: User Query에서 정확한 날짜 범위 추출
-
-<br>
-
-### 7. Retriever
-- Text : Milvus Retriever(textDB) + LLMReranking
-- Table : Milvus Retriever(tableDB) + KiwiBM25Retriever(table)
-- Raptor(date) : Milvus Retriever(raptorDB)
-- Raptor(number) : Self Query Retriever(raptorDB)
-- Image : Milvus Retriever(imageDB)
-
-<br>
-
-### 8. 문서 요약
-- Raptor 방법론을 이용한 요약 Vector 생성 및 별도 Collection으로 저장하여 사용
-- 논문 참고 : [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](https://arxiv.org/html/2401.18059v1)
-- 호수와 관련된 질문은 SelfQuery, 날짜와 관련된 질문은 일반 Milvus Retriever로 검색 수행
-
-<br>
-
-### 9. Query Routing
-
-
-<br>
-<br>
-
 ## 디렉터리 구조
 ```
 ├── 📑 README.md
@@ -232,5 +168,90 @@
 
 <br>
 <br>
+
+## 프로젝트 수행
+### 1. Parsing
+- LangGraph 및 Upstage Layout Analyzer를 통한 요소별 데이터를 좌표 기준으로 추출
+- Text
+  - Rule-Based로 전처리
+- Table
+  - Llama Parser를 이용해 Markdown 형태로 추출
+- Chart
+  - OCR을 이용해 내용 추출
+
+<br>
+
+### 2. VectorDB
+- Structure
+  - [ATTU](https://github.com/zilliztech/attu) 활용
+  - Text, Table, Raptor, Image로 구성
+  - Index Type & Metric Type : AUTOINDEX - IP
+
+<br>
+
+### 3. 평가 방법
+- AutoRAG를 이용한 QA Set 생성
+- RAGAS 평가 지표 4가지 활용 : `Context Recall`, `Context Precision`, `Answer Similarity`, `Answer Correctness`
+
+<br>
+
+### 4. Embedding
+- Upstage Solar Embedding 및 [bge-m3](https://huggingface.co/BAAI/bge-m3) 이용
+
+<br>
+
+### 5. Chunking
+- Sementic Chunker 사용
+  - parameter : Percentile 80% based breakpoint
+
+<br>
+
+### 6. 날짜 처리
+- Milvus 메타데이터 필터링 기능 사용: User Query에서 정확한 날짜 범위 추출
+
+<br>
+
+### 7. Retriever
+- Text : Milvus Retriever(textDB) + LLMReranking
+- Table : Milvus Retriever(tableDB) + KiwiBM25Retriever(table)
+- Raptor(date) : Milvus Retriever(raptorDB)
+- Raptor(number) : Self Query Retriever(raptorDB)
+- Image : Milvus Retriever(imageDB)
+
+<br>
+
+### 8. 문서 요약
+- Raptor 방법론을 이용한 요약 Vector 생성 및 별도 Collection으로 저장하여 사용
+- 논문 참고 : [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](https://arxiv.org/html/2401.18059v1)
+- 호수와 관련된 질문은 SelfQuery, 날짜와 관련된 질문은 일반 Milvus Retriever로 검색 수행
+
+<br>
+
+### 9. Query Routing
+- 질문 유형에 따른 최적화된 답변 제공을 위해 사용
+- 질문 입력 ➡️ 날짜 관련 질문, 특정 호수 질문, 범용 질문인지 판단
+  - 날짜 관련 질문 : 요약, 예측, 일반 질문인지를 추가로 구분
+- 각 질문에 최적 프롬프트 및 체인을 사용하도록 구성
+
+<br>
+
+### 10. Chart
+- 이미지에서 직접적 정보를 추출하는 것은 위험성 존재 ➡️ 참고 자료로 활용
+- RAG 체인을 통해 얻은 답변 + image vectorstore에서 검색된 이미지 요약 ➡️ Groundedness Checker로 검증
+
+<br>
+<br>
+
+
+## RAG Architecture
+![Image](https://github.com/user-attachments/assets/3b6b38f7-96a6-4c30-a922-a9ae3745d561)
+![Image](https://github.com/user-attachments/assets/ea56c403-18ae-405d-aa5c-f2467d3b3a58)
+
+<br>
+<br>
+
+## 검색 수행 결과
+📍 시연 영상 첨부 📍
+
 
 ## 참고 문서 및 코드 참고
