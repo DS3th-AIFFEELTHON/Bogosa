@@ -1,5 +1,5 @@
 # 🕵️ Bogosa
-### [AIFFELthon DS 3기] 보고사: 금융 보고서 기반 VectorDB 구축 및 RAG 최적화
+### [AIFFELthon DS 3기] 보고사: 채권 리포트 기반 VectorDB 구축 및 RAG 최적화
 - 금융 보고서 기반 최적 VectorDB 생성 & RAG 기법 최적화 및 신뢰도 높은 금융 특화 LLM 환경 구축 Project
 
 📍 시연 영상 캡쳐본 넣기 📍
