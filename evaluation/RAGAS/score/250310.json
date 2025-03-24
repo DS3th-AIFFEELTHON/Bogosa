@@ -1,0 +1,20 @@
+[
+    {
+        "context_recall": 0.4,
+        "context_precision": 0.7277777777604074,
+        "answer_similarity": 0.8600115771667086,
+        "answer_correctness": 0.42167158060395893
+    },
+    {
+        "context_recall": 0.4,
+        "context_precision": 0.7277777777604074,
+        "answer_similarity": 0.8600378352990123,
+        "answer_correctness": 0.3439875979199763
+    },
+    {
+        "context_recall": 0.4,
+        "context_precision": 0.7147222222048449,
+        "answer_similarity": 0.8600200740182529,
+        "answer_correctness": 0.3566692151605527
+    }
+]
