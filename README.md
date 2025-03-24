@@ -253,5 +253,40 @@
 ## 검색 수행 결과
 📍 시연 영상 첨부 📍
 
+### 💬 "2주전 은행채 발행액은?" <br>
+![Image](https://github.com/user-attachments/assets/4cb5cdd2-081c-4a11-b924-06e6637ff9e5)
+
+<br>
+
+### 💬 "2025년 1월 24일과 2025년 1월 17일의 국공채 시장 동향을 비교하시오." <br>
+![Image](https://github.com/user-attachments/assets/c70b6436-a204-496a-93e2-251fde8c1748)
+
+<br>
+
+### 💬 "지난 달 은행채 발행액 총액은?" <br>
+![Image](https://github.com/user-attachments/assets/1c5289bb-c49c-4361-b97d-604744578dc9)
+
+- 실제 12월 1 - 4주차 은행채 발행액 정보 <br>
+![Image](https://github.com/user-attachments/assets/874940de-357f-4ea1-895f-72aa83bdc4bf)
+
+<br>
+
+### "💬 1101호 요약해줘." <br>
+![Image](https://github.com/user-attachments/assets/70741f12-467c-4803-a0d3-c2acf26e64b0)
+
+<br>
+
+### 💬 "다음달 회사채 시장과 스프레드 전망 알려줘." <br>
+![Image](https://github.com/user-attachments/assets/4017690a-68f2-4eed-9a64-0db7a6b06c35)
+
+<br>
+<br>
 
 ## 참고 문서 및 코드 참고
+- 참고
+  - [<랭체인LangChain 노트> - LangChain 한국어 튜토리얼🇰🇷](https://wikidocs.net/233341)
+  - [테디노트 YouTube 로 RAG 배우기!](https://teddylee777.notion.site/YouTube-RAG-10a24f35d12980dc8478c750faa752a2)
+  - [이토록 쉬운 RAG 시스템 구축을 위한 랭체인 실전 가이드](https://www.yes24.com/product/goods/136548871)
+  - 
+
+
